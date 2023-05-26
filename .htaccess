@@ -20,17 +20,17 @@ AddEncoding gzip svgz
   # SET DISPLAY ORDER
   IndexOrderDefault Ascending Name
 
-  IndexStyleSheet ./assets/css/style.css
+  IndexStyleSheet /pantallas/assets/css/style.css
 
   # SPECIFY HEADER FILE
-  HeaderName ./layout/header.html
+  HeaderName /pantallas/layout/header.html
 
   # SPECIFY FOOTER FILE
-  ReadmeName ./layout/footer.html
+  ReadmeName /pantallas/layout/footer.html
 
   # IGNORE THESE FILES
   IndexIgnoreReset ON
-  IndexIgnore .ftpquota .DS_Store .git
+  IndexIgnore .ftpquota .DS_Store .git .idea
 
   # FILE DESCRIPTIONS
   AddDescription "MPEG Layer 3 Format" .mp3
