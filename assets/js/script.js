@@ -19,22 +19,7 @@
         break;
     }
   }
-  /*
-  var playlist = [
-    {
-      videoUrl: "mediaShare/"//,
-      //audioUrl: "audio1.mp3"
-    },
-    {
-      videoUrl: "video2.mp4"//,
-      //audioUrl: "audio2.mp3"
-    },
-    {
-      videoUrl: "video3.mp4"//,
-      //audioUrl: "audio3.mp3"
-    }
-  ];
-*/
+
   var currentVideoIndex = 0;
   var videoPlayer = document.getElementById('videoPlayer');
 
@@ -45,12 +30,13 @@
 
     var currentVideo = playlist[currentVideoIndex];
     videoPlayer.innerHTML = '<video autoplay><source src="/pantallas/mediaShare/' + currentVideo.videoUrl + '" type="video/mp4"></video>';
-    //videoPlayer.innerHTML += '<audio autoplay><source src="' + currentVideo.audioUrl + '" type="audio/mp3"></audio>';
 
     currentVideoIndex++;
+    let video = document.querySelector("video");
+    video.addEventListener("ended", (event) => {playNextVideo()});
+
   }
 
   // Reproducir el primer video al cargar la página
   playNextVideo();
-
 }
