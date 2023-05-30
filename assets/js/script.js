@@ -37,6 +37,12 @@
 
   }
 
-  // Reproducir el primer video al cargar la página
-  playNextVideo();
+  // Reproducir el primer video al cargar la página si hay videos en la lista
+  if(playlist.length != 0){
+    playNextVideo();
+  }else{
+    let link = document.querySelector('a[href="mediaShare/"]');
+    if(link != null){ link.click()}
+  }
+
 }
