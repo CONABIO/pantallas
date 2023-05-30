@@ -29,7 +29,7 @@
     }
 
     var currentVideo = playlist[currentVideoIndex];
-    videoPlayer.innerHTML = '<video autoplay><source src="/pantallas/mediaShare/' + currentVideo.videoUrl + '" type="video/mp4"></video>';
+    videoPlayer.innerHTML = '<video autoplay controls><source src="/pantallas/mediaShare/' + currentVideo.videoUrl + '" type="video/mp4"></video>';
 
     currentVideoIndex++;
     let video = document.querySelector("video");
